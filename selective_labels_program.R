@@ -48,8 +48,7 @@ ctrl <- trainControl(method = "cv",
 #データ読み込み
 bank_df_org <- read.csv("data/bank-full.csv")
 bank_df <- bank_df_org %>% 
-  mutate(y = as.factor(y)) %>% 
-  sample_frac(0.2)
+  mutate(y = as.factor(y)) 
 
 # 10分割
 N <- 10
